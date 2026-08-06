@@ -1,0 +1,93 @@
+{
+  "engine": "google",
+  "source_lang": "auto",
+  "source_langs": [
+    "auto"
+  ],
+  "target_lang": "zh-CN",
+  "skip_target": true,
+  "recursive": false,
+  "extensions": "*",
+  "last_folder": "C:/Users/29773/Videos/特殊/吃鸡",
+  "proxy": "127.0.0.1:10808",
+  "timeout": 20,
+  "google": {},
+  "deepl": {
+    "api_key": "",
+    "api_type": "free"
+  },
+  "yandex": {
+    "api_key": ""
+  },
+  "baidu": {
+    "appid": "",
+    "secret": ""
+  },
+  "volcengine": {
+    "access_key": "",
+    "secret_key": ""
+  },
+  "niutrans": {
+    "api_key": ""
+  },
+  "tencent": {
+    "secret_id": "",
+    "secret_key": ""
+  },
+  "ai": {
+    "base_url": "https://api.deepseek.com/v1",
+    "api_key": "",
+    "model": "deepseek-chat",
+    "temperature": 0.3,
+    "system_prompt": "你是一名专业翻译。请准确、通顺地翻译用户提供的文件名文本，保留数字、符号和常见缩写，只输出翻译结果，不要任何解释、引号或多余内容。"
+  },
+  "custom_sources": [
+    {
+      "name": "MyMemory(免费示例)",
+      "url": "https://api.mymemory.translated.net/get?q={text}&langpair={source}|{target}",
+      "method": "GET",
+      "headers": "{}",
+      "body": "",
+      "response_path": "responseData.translatedText"
+    }
+  ],
+  "glossary": {
+    "enabled": true,
+    "case_sensitive": false,
+    "files": [
+      "json/naughty-words-js/3333/zh.json",
+      "json/naughty-words-js/ar.json",
+      "json/naughty-words-js/cs.json",
+      "json/naughty-words-js/da.json",
+      "json/naughty-words-js/de.json",
+      "json/naughty-words-js/en.json",
+      "json/naughty-words-js/eo.json",
+      "json/naughty-words-js/es.json",
+      "json/naughty-words-js/fa.json",
+      "json/naughty-words-js/fi.json",
+      "json/naughty-words-js/fil.json",
+      "json/naughty-words-js/fr-CA-u-sd-caqc.json",
+      "json/naughty-words-js/fr.json",
+      "json/naughty-words-js/hi.json",
+      "json/naughty-words-js/hu.json",
+      "json/naughty-words-js/it.json",
+      "json/naughty-words-js/ja.json",
+      "json/naughty-words-js/kab.json",
+      "json/naughty-words-js/ko.json",
+      "json/naughty-words-js/nl.json",
+      "json/naughty-words-js/no.json",
+      "json/naughty-words-js/pl.json",
+      "json/naughty-words-js/pt.json",
+      "json/naughty-words-js/ru.json",
+      "json/naughty-words-js/sv.json",
+      "json/naughty-words-js/th.json",
+      "json/naughty-words-js/tlh.json",
+      "json/naughty-words-js/tr.json",
+      "json/naughty-words-js/zh.json"
+    ]
+  },
+  "window_size": [
+    960,
+    720
+  ]
+}
