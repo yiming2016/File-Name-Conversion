@@ -1,5 +1,5 @@
 {
-  "engine": "MyMemory(免费示例)",
+  "engine": "google",
   "source_lang": "auto",
   "source_langs": [
     "auto"
@@ -35,12 +35,64 @@
     "secret_id": "",
     "secret_key": ""
   },
+  "bing": {},
+  "papago": {
+    "client_id": "",
+    "client_secret": ""
+  },
   "ai": {
-    "base_url": "https://api.deepseek.com/v1",
-    "api_key": "",
-    "model": "deepseek-chat",
-    "temperature": 0.3,
-    "system_prompt": "你是一名专业翻译。请准确、通顺地翻译用户提供的文件名文本，保留数字、符号和常见缩写，只输出翻译结果，不要任何解释、引号或多余内容。"
+    "providers": {
+      "DeepSeek": {
+        "base_url": "https://api.deepseek.com/v1",
+        "model": "deepseek-chat",
+        "api_key": "",
+        "temperature": 0.3,
+        "system_prompt": "你是一名专业翻译。请准确、通顺地翻译用户提供的文件名文本，保留数字、符号和常见缩写，只输出翻译结果，不要任何解释、引号或多余内容。"
+      },
+      "OpenAI": {
+        "base_url": "https://api.openai.com/v1",
+        "model": "gpt-4o-mini",
+        "api_key": "",
+        "temperature": 0.3,
+        "system_prompt": "你是一名专业翻译。请准确、通顺地翻译用户提供的文件名文本，保留数字、符号和常见缩写，只输出翻译结果，不要任何解释、引号或多余内容。"
+      },
+      "通义千问(阿里)": {
+        "base_url": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+        "model": "qwen-plus",
+        "api_key": "",
+        "temperature": 0.3,
+        "system_prompt": "你是一名专业翻译。请准确、通顺地翻译用户提供的文件名文本，保留数字、符号和常见缩写，只输出翻译结果，不要任何解释、引号或多余内容。"
+      },
+      "智谱GLM": {
+        "base_url": "https://open.bigmodel.cn/api/paas/v4",
+        "model": "glm-4-flash",
+        "api_key": "",
+        "temperature": 0.3,
+        "system_prompt": "你是一名专业翻译。请准确、通顺地翻译用户提供的文件名文本，保留数字、符号和常见缩写，只输出翻译结果，不要任何解释、引号或多余内容。"
+      },
+      "Moonshot(Kimi)": {
+        "base_url": "https://api.moonshot.cn/v1",
+        "model": "moonshot-v1-8k",
+        "api_key": "",
+        "temperature": 0.3,
+        "system_prompt": "你是一名专业翻译。请准确、通顺地翻译用户提供的文件名文本，保留数字、符号和常见缩写，只输出翻译结果，不要任何解释、引号或多余内容。"
+      },
+      "本地 Ollama": {
+        "base_url": "http://127.0.0.1:11434/v1",
+        "model": "qwen2.5:7b",
+        "api_key": "",
+        "temperature": 0.3,
+        "system_prompt": "你是一名专业翻译。请准确、通顺地翻译用户提供的文件名文本，保留数字、符号和常见缩写，只输出翻译结果，不要任何解释、引号或多余内容。"
+      },
+      "自定义": {
+        "base_url": "https:",
+        "model": "mistral:7b",
+        "api_key": "",
+        "temperature": 0.3,
+        "system_prompt": "你是一名专业翻译。请准确、通顺地翻译用户提供的文件名文本，保留数字、符号和常见缩写，只输出翻译结果，不要任何解释、引号或多余内容。"
+      }
+    },
+    "current": "本地 Ollama"
   },
   "custom_sources": [
     {
@@ -61,5 +113,31 @@
     1955,
     986
   ],
-  "last_files": ""
+  "last_files": "",
+  "last_settings_tab": "AI 模型",
+  "default_settings_tab": "谷歌翻译",
+  "settings_tab_order": {
+    "group0": [
+      "通用",
+      "谷歌翻译",
+      "DeepL",
+      "Yandex",
+      "小牛翻译",
+      "腾讯云",
+      "火山翻译",
+      "Bing 翻译",
+      "百度翻译",
+      "Papago 翻译",
+      "自定义翻译源"
+    ],
+    "group1": [
+      "DeepSeek",
+      "OpenAI",
+      "通义千问(阿里)",
+      "Moonshot(Kimi)",
+      "智谱GLM",
+      "本地 Ollama",
+      "自定义"
+    ]
+  }
 }
