@@ -1,19 +1,20 @@
 {
-  "engine": "google",
+  "engine": "MyMemory(免费示例)",
   "source_lang": "auto",
   "source_langs": [
     "auto"
   ],
   "target_lang": "zh-CN",
   "skip_target": true,
-  "recursive": false,
+  "recursive": true,
   "extensions": "*",
-  "last_folder": "C:/Users/29773/Videos/特殊/吃鸡",
+  "last_folder": "C:/Users/29773/Videos/特殊/下载",
   "proxy": "127.0.0.1:10808",
+  "proxy_type": "auto",
   "timeout": 20,
   "google": {},
   "deepl": {
-    "api_key": "",
+    "api_key": "27cfcc01-b7a5-4323-a376-beef8bbd00ca:fx",
     "api_type": "free"
   },
   "yandex": {
@@ -54,40 +55,11 @@
   "glossary": {
     "enabled": true,
     "case_sensitive": false,
-    "files": [
-      "json/naughty-words-js/3333/zh.json",
-      "json/naughty-words-js/ar.json",
-      "json/naughty-words-js/cs.json",
-      "json/naughty-words-js/da.json",
-      "json/naughty-words-js/de.json",
-      "json/naughty-words-js/en.json",
-      "json/naughty-words-js/eo.json",
-      "json/naughty-words-js/es.json",
-      "json/naughty-words-js/fa.json",
-      "json/naughty-words-js/fi.json",
-      "json/naughty-words-js/fil.json",
-      "json/naughty-words-js/fr-CA-u-sd-caqc.json",
-      "json/naughty-words-js/fr.json",
-      "json/naughty-words-js/hi.json",
-      "json/naughty-words-js/hu.json",
-      "json/naughty-words-js/it.json",
-      "json/naughty-words-js/ja.json",
-      "json/naughty-words-js/kab.json",
-      "json/naughty-words-js/ko.json",
-      "json/naughty-words-js/nl.json",
-      "json/naughty-words-js/no.json",
-      "json/naughty-words-js/pl.json",
-      "json/naughty-words-js/pt.json",
-      "json/naughty-words-js/ru.json",
-      "json/naughty-words-js/sv.json",
-      "json/naughty-words-js/th.json",
-      "json/naughty-words-js/tlh.json",
-      "json/naughty-words-js/tr.json",
-      "json/naughty-words-js/zh.json"
-    ]
+    "files": []
   },
   "window_size": [
-    960,
-    720
-  ]
+    1955,
+    986
+  ],
+  "last_files": ""
 }
