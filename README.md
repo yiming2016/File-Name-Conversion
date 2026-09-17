@@ -88,7 +88,7 @@ python main.py
 双击 `build_exe.bat`，或手动执行：
 
 ```bat
-python -m PyInstaller --noconfirm --clean --onefile --windowed --name "文件名翻译器" --icon logo.ico --distpath "..\成品-打开即用" --workpath build --specpath . main.py
+python -m PyInstaller --noconfirm --clean --onefile --windowed --name "文件名翻译器" --icon logo.ico --distpath "..\软件" --workpath build --specpath . main.py
 ```
 
 ## 使用方法
@@ -113,11 +113,11 @@ python -m PyInstaller --noconfirm --clean --onefile --windowed --name "文件名
 
 ```
 .
-├─ 成品-打开即用\          打开即用版本：exe + 词库 + 使用说明
+├─ 软件\                  打开即用版本：exe + 词库 + 使用说明
 │   ├─ 文件名翻译器.exe
 │   ├─ 词库\               按格式分文件夹（tsv / tbx / tmx / json / csv / txt）
 │   └─ config.json         运行配置（首次运行自动生成）
-└─ 开发源码\              源码与打包脚本
+└─ 源码\                  源码与打包脚本
     ├─ app\                GUI / 翻译引擎 / 核心逻辑 / 词库解析
     ├─ main.py             程序入口
     ├─ build_exe.bat       一键打包 exe
