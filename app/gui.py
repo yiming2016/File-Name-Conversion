@@ -6,6 +6,7 @@ import csv
 import os
 import queue
 import subprocess
+import sys
 import threading
 import time
 import tkinter as tk
@@ -1972,27 +1973,30 @@ class FileTranslatorApp:
         self.root.after(80, self._poll)
 
     # ================================================================ 图标与资源
+    def _asset_dirs(self):
+        """资源查找目录：先看程序同目录（可自定义替换），再看 exe 内部打包的资源。"""
+        dirs = [cfg_mod.get_app_dir(), os.path.join(cfg_mod.get_app_dir(), "app")]
+        bundled = getattr(sys, "_MEIPASS", None)  # PyInstaller 打包后 exe 内部资源目录
+        if bundled:
+            dirs.append(bundled)
+        return dirs
+
     def _find_asset(self, name):
-        for p in (
-            os.path.join(cfg_mod.get_app_dir(), name),
-            os.path.join(cfg_mod.get_app_dir(), "app", name),
-        ):
+        for d in self._asset_dirs():
+            p = os.path.join(d, name)
             if os.path.exists(p):
                 return p
         return None
 
     def _apply_icon(self):
-        # 优先使用用户提供的 logo.ico（exe 图标一致）
-        for p in (
-            os.path.join(cfg_mod.get_app_dir(), "logo.ico"),
-            os.path.join(cfg_mod.get_app_dir(), "app", "logo.ico"),
-        ):
-            if os.path.exists(p):
-                try:
-                    self.root.iconbitmap(default=p)
-                    return
-                except tk.TclError:
-                    pass
+        # 优先使用 logo.ico（与 exe 图标一致；文件夹里没有时用 exe 内部打包的）
+        p = self._find_asset("logo.ico")
+        if p:
+            try:
+                self.root.iconbitmap(default=p)
+                return
+            except tk.TclError:
+                pass
         # 回退：logo.png
         p = self._find_asset("logo.png")
         if not p:
